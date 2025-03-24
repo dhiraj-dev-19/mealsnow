@@ -1,0 +1,250 @@
+/* Reset and General Styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('bg.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Fallback */
+    color: #333;
+    text-align: center;
+    overflow: hidden; /* Disable scrolling */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Landing Page Container */
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(253, 242, 227, 0.9); /* Semi-transparent light cream */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 50px; /* Smaller logo size */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.75rem; /* Adjusted font size */
+    font-weight: 600;
+    color: #442c31; /* Deep brownish-red for "MealsNow" */
+  }
+  
+  /* Navigation */
+  nav {
+    position: relative;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: #f56969; /* Coral red */
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu li a {
+    color: #442c31; /* Deep brownish-red */
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f56969; /* Coral red */
+    color: white;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked ~ .dropdown-menu {
+    display: block;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1; /* Takes remaining space */
+    padding: 2rem;
+  }
+  
+  .main-content .text {
+    max-width: 50%;
+  }
+  
+  .main-content .text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #442c31; /* Deep brownish-red */
+  }
+  
+  .main-content .text button {
+    background-color: #f56969; /* Coral red */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .main-content .text button:hover {
+    background-color: #e55c5c; /* Slightly darker coral red */
+  }
+  
+  .main-content .images img.main {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 1rem;
+    background-color: rgba(253, 242, 227, 0.9); /* Semi-transparent light cream */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #442c31; /* Deep brownish-red */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .main-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .main-content .text {
+      max-width: 100%;
+    }
+  
+    .main-content .images {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      height: 40px; /* Smaller logo for mobile */
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .main-content .text h1 {
+      font-size: 2rem;
+    }
+  
+    .main-content .images img.main {
+      width: 100%;
+    }
+  }
+  /* Add animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply animations */
+.messCard, .login-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.messCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Modern button styles */
+button {
+  background-color: #f56969;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55c5c;
+}
+
+/* Modern input styles */
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #f56969;
+  outline: none;
+}

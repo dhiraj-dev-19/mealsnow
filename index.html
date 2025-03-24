@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealsNow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="MealsNow Logo" class="logo">
+            <h1>MealsNow</h1>
+        </div>
+        <div class="search-filter">
+            <input type="text" id="searchBar" placeholder="Search for messes...">
+            <select id="dayFilter">
+                <option value="all">All Days</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <select id="mealFilter">
+                <option value="all">All Meals</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div id="messesList">
+            <!-- Mess cards will be dynamically inserted here -->
+        </div>
+        <div class="admin-login-button">
+            <button onclick="window.location.href='adminlogin.html'">Admin Login</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

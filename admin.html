@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - MealsNow</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="MealsNow Logo" class="logo">
+      <h1>MealsNow</h1>
+    </div>
+    <div class="admin-login-button">
+      <button onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Admin Dashboard</h1>
+
+      <!-- Section for Managing Menus -->
+      <section class="menu-management">
+        <h2>Manage Menus</h2>
+        <form id="add-menu-form">
+          <h3>Add/Update Menu</h3>
+          <select id="mess-select" required>
+            <option value="" disabled selected>Select a Mess</option>
+          </select>
+          
+          <!-- Day Dropdown -->
+          <select id="menu-day" required>
+            <option value="" disabled selected>Select Day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+
+          <!-- Meal Type Dropdown -->
+          <select id="meal-type" required>
+            <option value="" disabled selected>Select Meal Type</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+          </select>
+
+          <textarea id="menu-items" placeholder="Enter menu items (comma-separated)" required></textarea>
+          <button type="submit">Save Menu</button>
+        </form>
+
+        <div class="menu-list">
+          <h3>Existing Menus</h3>
+          <ul id="menu-list">
+            <!-- Dynamically populated list of menus -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section for Managing Messes -->
+      <section class="mess-management">
+        <h2>Manage Messes</h2>
+        <div class="mess-list">
+          <h3>Existing Messes</h3>
+          <ul id="mess-list">
+            <!-- Dynamically populated list of messes -->
+          </ul>
+        </div>
+
+        <form id="add-mess-form">
+          <h3>Add New Mess</h3>
+          <input type="text" id="mess-name" placeholder="Mess Name" required>
+          <input type="text" id="mess-location" placeholder="Location" required>
+          <button type="submit">Add Mess</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

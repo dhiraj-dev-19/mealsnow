@@ -1,0 +1,196 @@
+/* admin.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('bg.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark grey for text */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+h1, h2, h3 {
+  color: #442c31; /* Deep brownish-red for headings */
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, select, textarea, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background-color: #f56969; /* Coral red */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55c5c; /* Slightly darker coral red */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #dc3545; /* Red for delete buttons */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #c82333; /* Slightly darker red */
+}
+
+.mess-management {
+  background-color: rgba(233, 236, 239, 0.9); /* Semi-transparent light grey */
+}
+
+.menu-management {
+  background-color: rgba(248, 249, 250, 0.9); /* Semi-transparent lighter grey */
+}
+/* Header */
+header {
+  background: #fdf2e3; /* Light cream background */
+  color: #442c31; /* Deep brownish-red for text */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px; /* Smaller logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem; /* Adjusted font size */
+  font-weight: 600;
+  color: #442c31; /* Deep brownish-red for "MealsNow" */
+}
+
+/* Admin Login Button */
+.admin-login-button {
+  margin-left: auto; /* Push button to the right */
+}
+
+.admin-login-button button {
+  background-color: #f56969; /* Coral red */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem; /* Smaller padding */
+  font-size: 0.9rem; /* Smaller font size */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-login-button button:hover {
+  background-color: #e55c5c; /* Slightly darker coral red */
+}
+/* Add animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply animations */
+.messCard, .login-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.messCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Modern button styles */
+button {
+  background-color: #f56969;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55c5c;
+}
+
+/* Modern input styles */
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #f56969;
+  outline: none;
+}
